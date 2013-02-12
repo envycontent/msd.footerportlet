@@ -1,0 +1,12 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<metal:block metal:define-macro="portlet">
+
+<div id="plonelinks">
+ <a href="http://plone.org"><img src="plone_powered.gif" height="15" width="80" alt="Powered by Plone" title="This Plone site was built using the Plone Content Management System. Click for more information." /></a> </div>
+       
+</metal:block>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<metal:block metal:define-macro="portlet">
+
+
+       <p id="legallinks"><a href="http://www.admin.ox.ac.uk/foi/">Freedom of Information</a> | <a href="http://www.admin.ox.ac.uk/councilsec/privacy.shtml">University Privacy Policy</a> | <a href="http://www.ox.ac.uk/copyright/">University Copyright Statement</a> | <a href="http://www.ox.ac.uk/web/rules/accessibility.html">University Accessibility Statement</a></p>
+
+
+</metal:block>
+</body>
+</html>

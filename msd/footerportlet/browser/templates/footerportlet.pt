@@ -1,0 +1,4 @@
+
+	
+<div tal:content="structure provider:msd.msdfooter" /> 
+

@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="msd.footerportlet">
+
+	<include package=".browser" />
+
+<!-- register the Generic Setup extension profile -->
+	<genericsetup:registerProfile
+	      name="default"
+	      title="MSD Footer Portlet"
+	      directory="profiles/default"
+	      description="Extension profile for msd.footerportlet"
+	      provides="Products.GenericSetup.interfaces.EXTENSION"
+	      />
+	      
+	<include file="skins.zcml" />
+
+</configure>

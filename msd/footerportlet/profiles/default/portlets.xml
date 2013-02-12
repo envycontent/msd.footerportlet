@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- Set up all the new portlet managers we need above and below the content well -->
+<portlets>
+
+ 
+ 	<portletmanager 
+ 		 name="melipona.portalfooter"
+ 		 type="msd.footerportlet.browser.interfaces.IFooterPortletManager"
+ 	/>
+ <assignment name="footer" category="context" key="/" manager="melipona.portalfooter"
+     type="plone.portlet.static.Static">
+   <property name="header">footer</property>
+   <property name="more_url"/>
+   <property name="hide">False</property>
+   <property name="footer"/>
+   <property name="text">Copyright, Address and Contact Details here</property>
+   <property name="omit_border">True</property>
+  </assignment>
+
+  <assignment name="portlet_legallinks" category="context" key="/"
+      manager="melipona.portalfooter" type="portlets.Classic">
+    <property name="macro">portlet</property>
+    <property name="template">portlet_legallinks</property>
+   </assignment>
+  <assignment name="portlet_plonelinks" category="context" key="/"
+      manager="melipona.portalfooter" type="portlets.Classic">
+    <property name="macro">portlet</property>
+    <property name="template">portlet_plonelinks</property>
+   </assignment>
+
+</portlets>

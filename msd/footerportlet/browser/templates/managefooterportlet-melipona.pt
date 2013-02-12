@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+	<head>
+	    <div metal:fill-slot="javascript_head_slot" tal:omit-tag="">
+	        <link type="text/css" rel="kinetic-stylesheet"
+	            tal:attributes="href string:${context/absolute_url}/++resource++manage-portlets.kss"/>
+	    </div>
+	</head>
+	<body>
+
+		<div metal:fill-slot="portlets_one_slot">
+			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
+		</div>
+
+		<div metal:fill-slot="main">
+
+			<tal:warning tal:condition="plone_view/isDefaultPageInFolder">
+				<dl class="portalMessage warning">
+					<dt>Is this really where you want to add a footer portlet?</dt>
+					<dd>If you add portlets here, they will only appear on this item. If instead you want portlets to appear on all items in this folder, 
+						<a href=""
+						   tal:attributes="href string:${plone_view/getCurrentFolderUrl}/@@manage-footerportlet">
+							add them to the folder itself
+						</a>
+					</dd>
+				<dl>
+			</tal:warning>	
+
+			<h1 class="documentFirstHeading">Manage the Footer Portlets</h1>
+			
+			<p>
+				 <a href=""
+				       class="link-parent"
+				       tal:attributes="href string:${context/absolute_url}"
+				       i18n:translate="return_to_view">
+				    Return
+				 </a>
+			</p>			
+			
+			<h2>Footer Portlet</h2>
+			For a footer with department name and contact details, use the static text portlet and give it the title "footer".
+			<span tal:replace="structure provider:melipona.portalfooter" />
+
+			
+		</div>
+
+		<div metal:fill-slot="portlets_two_slot">
+			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
+		</div>
+		
+		<div metal:fill-slot="msd-footer">
+			<tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
+		</div>
+		
+
+
+	</body>
+</html>
